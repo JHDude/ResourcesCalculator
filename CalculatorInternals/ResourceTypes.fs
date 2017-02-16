@@ -12,3 +12,8 @@ module ResourceTypes =
         | Ilmenite
         | IronOre
         | Limestone
+        | LithiumOre
+        | QuartzSand
+        | RoughDiamonds
+        | SilverOre
+    
