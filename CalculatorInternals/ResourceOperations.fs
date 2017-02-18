@@ -16,7 +16,7 @@ module CreationOperations =
         // Cough up the total cost
         let totalCost = rClay clayIn
                         |> price
-                        |> aCurr ((+) 10)
+                        |> aCurr ((+) pricePerOp)
                         |> (*) numCycles
 
         let totalBricks = numCycles * bricksPerOp
