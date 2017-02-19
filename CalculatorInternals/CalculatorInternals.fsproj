@@ -45,6 +45,7 @@
   <ItemGroup>
     <Compile Include="AssemblyInfo.fs" />
     <Compile Include="ResourceTypes.fs" />
+    <Compile Include="MarketData.fs" />
     <Compile Include="ResourceOperations.fs" />
     <None Include="Script.fsx" />
   </ItemGroup>
