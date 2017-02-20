@@ -29,10 +29,6 @@ module Time =
 
 [<AutoOpen>]
 module ResourceTypes = 
-    open Currency
-    open Time
-    open Units
-
     type TotalCost = 
         { MoneyCost : Currency
           TimeCost : Time }
