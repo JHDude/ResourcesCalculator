@@ -1,5 +1,6 @@
 ﻿namespace CalculatorInternals
 
+[<AutoOpen>]
 module Currency =
     type Currency = 
         | Currency of int
@@ -8,6 +9,7 @@ module Currency =
     let aCurr f (Currency c) = Currency(f c) // Applicator
     let addCurr (Currency a) (Currency b) = Currency(a + b)
 
+[<AutoOpen>]
 module Units =
     type Units = 
         | Units of int
@@ -16,6 +18,7 @@ module Units =
     let aUnits f (Units u) = Units(f u) // Applicator
     let addUnits (Units a) (Units b) = Units(a + b)
 
+[<AutoOpen>]
 module Time =
     type Time = 
         | Time of int
@@ -24,6 +27,7 @@ module Time =
     let aTime f (Time t) = Time(f t) // Applicator
     let addTime (Time a) (Time b) = Time(a + b)
 
+[<AutoOpen>]
 module ResourceTypes = 
     open Currency
     open Time
@@ -166,3 +170,10 @@ module ResourceTypes =
     
     type Weapons = 
         | Weapons of Resource
+
+    type OldTires =
+        | OldTires of Resource
+
+    type WasteGlass =
+        | WasteGlass of Resource
+

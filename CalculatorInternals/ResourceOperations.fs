@@ -1,10 +1,7 @@
 ﻿namespace CalculatorInternals
 
 module CreationOperations =
-    open CalculatorInternals.ResourceTypes
-    open CalculatorInternals.Currency
-    open CalculatorInternals.Time
-    open CalculatorInternals.Units
+
 
     //let Factory opTime 
 
