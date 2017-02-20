@@ -12,14 +12,12 @@ module MarketData =
                         MarketPrice : int;
                         HighestBid : int}
 
-    type MarketData = MarketData of List<RContainer> option
+    type MarketData = MarketData of List<RContainer>
     
     type Timestamp = Timestamp of System.DateTime
 
-    type MarketDataAndTimestamp = MDAT of Timestamp * MarketData
-
-
-
+    type MarketDataAndTimestamp = MDAT of (Timestamp * MarketData) option
+    
     let getCurrDateTime = Timestamp System.DateTime.UtcNow
 
     let queryMarket =
@@ -32,10 +30,9 @@ module MarketData =
                                     ItemEN = row.Column3;
                                     MarketPrice = row.Column4;
                                     HighestBid = row.Column5}]
-                        |> Some
                         |> MarketData
-                        
-                        
-        
-        MDAT(getCurrDateTime, dataList)
+                                                        
+        (getCurrDateTime, dataList)
+        |> Some
+        |> MDAT
         
